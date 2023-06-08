@@ -59,17 +59,13 @@ public class Menu {
 	public void añadirProducto() {
 		System.out.println("Ingrese el nombre del producto:");
 		String nombre = scanner.nextLine();
-		System.out.println("Ingrese el precio del producto:");
-		double precio = scanner.nextDouble();
-		scanner.nextLine(); // consume el newline
+		double precio = Validaciones.validaPrecio(scanner);
 		Producto producto = new Producto(nombre, precio);
 		vendedor.venderProducto(producto);
 	}
 
 	public void añadirPedido() {
-		System.out.println("Ingrese el número del pedido:");
-		int numeroPedido = scanner.nextInt();
-		scanner.nextLine(); // consume the newline
+		int numeroPedido = Validaciones.validaNumeroPedido(scanner);
 		Pedido pedido = new Pedido(numeroPedido);
 		vendedor.despacharPedido(pedido);
 	}

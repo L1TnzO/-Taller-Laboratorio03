@@ -1,43 +1,31 @@
+import java.util.ArrayList;
+
 public class Pedido {
-
 	private int numeroPedido;
-	private List<Producto> productos;
+	private ArrayList<Producto> productos;
 
-	/**
-	 * 
-	 * @param producto
-	 */
+	public Pedido(int numeroPedido) {
+		this.numeroPedido = numeroPedido;
+		productos = new ArrayList<Producto>();
+	}
+
 	public void agregarProducto(Producto producto) {
-		// TODO - implement Pedido.agregarProducto
-		throw new UnsupportedOperationException();
+		productos.add(producto);
 	}
 
 	public String toString() {
-		// TODO - implement Pedido.toString
-		throw new UnsupportedOperationException();
+		return "Número de Pedido: " + numeroPedido + ", Productos: " + productos;
 	}
 
 	public int getNumeroPedido() {
 		return this.numeroPedido;
 	}
 
-	/**
-	 * 
-	 * @param numeroPedido
-	 */
 	public void setNumeroPedido(int numeroPedido) {
 		this.numeroPedido = numeroPedido;
 	}
 
-	public List<Producto> getProductos() {
+	public ArrayList<Producto> getProductos() {
 		return this.productos;
-	}
-
-	/**
-	 * 
-	 * @param productos
-	 */
-	public void setProductos(List<Producto> productos) {
-		this.productos = productos;
 	}
 }

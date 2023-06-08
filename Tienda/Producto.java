@@ -1,21 +1,20 @@
 public class Producto {
-
 	private String nombre;
 	private double precio;
 
+	public Producto(String nombre, double precio){
+		this.nombre = nombre;
+		this.precio = precio;
+	}
+
 	public String toString() {
-		// TODO - implement Producto.toString
-		throw new UnsupportedOperationException();
+		return "Nombre: " + nombre + ", Precio: " + precio;
 	}
 
 	public String getNombre() {
 		return this.nombre;
 	}
 
-	/**
-	 * 
-	 * @param nombre
-	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
@@ -24,10 +23,6 @@ public class Producto {
 		return this.precio;
 	}
 
-	/**
-	 * 
-	 * @param precio
-	 */
 	public void setPrecio(double precio) {
 		this.precio = precio;
 	}

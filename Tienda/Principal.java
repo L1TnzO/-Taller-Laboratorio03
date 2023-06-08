@@ -1,12 +1,7 @@
 public class Principal {
-
-	/**
-	 * 
-	 * @param args
-	 */
-	public void main(String[] args) {
-		// TODO - implement Principal.main
-		throw new UnsupportedOperationException();
+	public static void main(String[] args) {
+		Vendedor vendedor = new Vendedor("Juan");
+		Menu menu = new Menu(vendedor);
+		menu.mostrarMenu();
 	}
-
 }

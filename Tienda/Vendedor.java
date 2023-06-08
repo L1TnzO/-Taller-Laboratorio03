@@ -1,65 +1,49 @@
+import java.util.ArrayList;
+
 public class Vendedor {
-
 	private String nombre;
-	private List<Producto> productos;
-	private List<Pedido> pedidos;
+	private ArrayList<Producto> productos;
+	private ArrayList<Pedido> pedidos;
 
-	/**
-	 * 
-	 * @param pedido
-	 */
-	public void despacharPedido(Pedido pedido) {
-		// TODO - implement Vendedor.despacharPedido
-		throw new UnsupportedOperationException();
+	public Vendedor(String nombre) {
+		this.nombre = nombre;
+		productos = new ArrayList<Producto>();
+		pedidos = new ArrayList<Pedido>();
 	}
 
-	/**
-	 * 
-	 * @param producto
-	 */
+	public void despacharPedido(Pedido pedido) {
+		pedidos.add(pedido);
+	}
+
 	public void venderProducto(Producto producto) {
-		// TODO - implement Vendedor.venderProducto
-		throw new UnsupportedOperationException();
+		productos.add(producto);
 	}
 
 	public String toString() {
-		// TODO - implement Vendedor.toString
-		throw new UnsupportedOperationException();
+		return "Nombre: " + nombre + ", Productos: " + productos + ", Pedidos: " + pedidos;
 	}
 
 	public String getNombre() {
 		return this.nombre;
 	}
 
-	/**
-	 * 
-	 * @param nombre
-	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
 
-	public List<Producto> getProductos() {
+	public ArrayList<Producto> getProductos() {
 		return this.productos;
 	}
 
-	/**
-	 * 
-	 * @param productos
-	 */
-	public void setProductos(List<Producto> productos) {
+	public void setProductos(ArrayList<Producto> productos) {
 		this.productos = productos;
 	}
 
-	public List<Pedido> getPedidos() {
+	public ArrayList<Pedido> getPedidos() {
 		return this.pedidos;
 	}
 
-	/**
-	 * 
-	 * @param pedidos
-	 */
-	public void setPedidos(List<Pedido> pedidos) {
+	public void setPedidos(ArrayList<Pedido> pedidos) {
 		this.pedidos = pedidos;
 	}
 }
